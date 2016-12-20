@@ -1,0 +1,38 @@
+﻿#section0 {
+
+        background-image: url("assets/Background.jpg"); 
+       
+}
+#section1 {
+
+        background-color: #ddc559; 
+
+        
+}
+#title0 
+{
+    font-family:Castellar;
+    align-items:center;
+    font-size:x-large;
+    font-weight:800; 
+    background-color:white;
+
+}
+.menuItems0 
+{
+    top:200px;
+
+    margin-left: -100px;
+    padding-right: 60px;
+    justify-content: space-between;
+      
+    font-family:Castellar;
+    font-size: medium;
+    font-weight:600; 
+   
+    /*layer*/
+    z-index = 5;
+   
+    color:black;
+
+}
