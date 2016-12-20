@@ -19,17 +19,17 @@
         <br />
         <asp:Menu ID="Menu0" runat="server" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False" OnMenuItemClick="Menu0_MenuItemClick">
          <Items>
-        <asp:MenuItem ImageUrl="~/assets/SelectedButton.png"
+        <asp:MenuItem ImageUrl="~/assets/tab0_unslct.png"
                       Text="about us" Value="0"></asp:MenuItem>
-        <asp:MenuItem ImageUrl="~/assets/InitialImage.png" 
+        <asp:MenuItem ImageUrl="~/assets/tab1_unslct.png" 
                       Text="shop" Value="1"></asp:MenuItem>
-        <asp:MenuItem ImageUrl="~/assets/InitialImage.png" 
-                      Text="contact" Value="2">
+        <asp:MenuItem ImageUrl="~/assets/tab2_unslct.png" 
+                      Text="contact" Value="2" >
            
         </asp:MenuItem>
         </Items>
         </asp:Menu>
-        <div id="section1">
+        <div runat="server" id="section1">
         <asp:MultiView ID="MultiView0" runat="server" ActiveViewIndex ="0">
           <%--View0----------------------------------------------------------------------------------------%>
               <asp:View ID="View0" runat="server">
