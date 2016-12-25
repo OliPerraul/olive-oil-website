@@ -1,9 +1,9 @@
-﻿#section0 {
+﻿#section_main {
 
         background-image: url("assets/Background.jpg"); 
        
 }
-#section1 {
+#section_multiview {
 
         background-color: #ddc559; 
 
@@ -30,7 +30,7 @@
     font-weight:600; 
    
     /*layer*/
-    z-index = 5;
+    z-index: 5;
    
     color:black;
 

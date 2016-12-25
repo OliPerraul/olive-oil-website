@@ -10,18 +10,22 @@ using System.Net;
 using System.IO;
 using System.Drawing.Imaging;
 
-public partial class _Default : System.Web.UI.Page
+public partial class MasterPage : System.Web.UI.MasterPage
 {
-    
-    protected void Page_PreInit()//run when the page is loaded
+    protected void Page_Init()//run when the page is loaded
     {
         Debug.WriteLine("website started");// website started
+
 
         foreach (MenuItem item in Menu0.Items)
         {
             string temp = item.Text;
             item.Text = "<span class=\"menuItems\">" + temp + "</span>";//assign correct style
+
+
+
         }
+
     }
 
 
@@ -30,27 +34,27 @@ public partial class _Default : System.Web.UI.Page
     {
         Menu menu = (Menu)sender;//type cast sender from Object to Menu
         MenuItem curr_item = menu.SelectedItem;
-        
+
         int index = Convert.ToInt32(curr_item.Value); //retrieve curr index
         MultiView0.ActiveViewIndex = index; //change the current view index
 
         AdjustMenuImageUrl(menu);
-       // OffsetMenuItemText(menu);
+        // OffsetMenuItemText(menu);
         ChangeSectionColor(curr_item);//change the color of the section associated with the current menu item
 
-               
+
     }
 
     public void OffsetMenuItemText(Menu menu)
     {
         MenuItem curr_item = menu.SelectedItem;
 
-        Debug.WriteLine(curr_item.Text);                    
+        Debug.WriteLine(curr_item.Text);
         string text = curr_item.Text;
-        curr_item.Text = "<span class=\"@menuItemSlct$\">" + text+ "</span>";//assign correct style to curr menu item
+        curr_item.Text = "<span class=\"@menuItemSlct$\">" + text + "</span>";//assign correct style to curr menu item
 
 
-     }
+    }
 
     public void AdjustMenuImageUrl(Menu menu) //convert color to hex code
     {
@@ -58,8 +62,8 @@ public partial class _Default : System.Web.UI.Page
 
         string path = curr_item.ImageUrl; //rertrieve image path
         int stringpos = path.IndexOf("_");
-        string path_root = path.Substring(0, stringpos+1);
-       
+        string path_root = path.Substring(0, stringpos + 1);
+
         curr_item.ImageUrl = path_root + "slct.png";
 
         foreach (MenuItem item in menu.Items)
@@ -83,9 +87,9 @@ public partial class _Default : System.Web.UI.Page
         System.Drawing.Bitmap bm = (Bitmap)System.Drawing.Bitmap.FromStream(stream);
         stream.Close();
 
-        Color color = bm.GetPixel(0, bm.Height/2);
+        Color color = bm.GetPixel(0, bm.Height / 2);
 
-        section1.Style["Background-Color"] = HexConverter(color);
+        section_multiview.Style["Background-Color"] = HexConverter(color);
     }
 
 
@@ -97,6 +101,3 @@ public partial class _Default : System.Web.UI.Page
 
 
 }
-
-
-
