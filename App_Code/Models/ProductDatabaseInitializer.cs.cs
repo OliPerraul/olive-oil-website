@@ -4,8 +4,9 @@
 
 //If you wanted the database to be recreated every time you ran the application, you could use the DropCreateDatabaseAlways 
 //    class instead of the DropCreateDatabaseIfModelChanges class. However for this tutorial series, use the DropCreateDatabaseIfModelChanges class.
-namespace WebSite1
+namespace Models
 {
+
     public class ProductDatabaseInitializer : DropCreateDatabaseIfModelChanges<ProductContext>
     {
         protected override void Seed(ProductContext context)// the base method should be overridden to actually add data to the context for seeding because The default implementation does nothing.
@@ -206,3 +207,4 @@ namespace WebSite1
     }
 
 }
+

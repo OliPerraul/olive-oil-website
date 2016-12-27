@@ -4,7 +4,7 @@
     using System.Linq;
     using System.Web;
 
-namespace WebSite1
+namespace Models
 {
     public class Product
     {
@@ -27,5 +27,5 @@ namespace WebSite1
         public virtual Category Category { get; set; } //Virtual keyword allows for it to be overridden in a derived class.
     }
 
-}
 
+}

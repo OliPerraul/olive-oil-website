@@ -1,6 +1,6 @@
 ﻿<%@ Application Language="C#" %>
 <%@ Import Namespace="System.Data.Entity" %>
-<%@ Import Namespace="WebSite1.App_Code.Models" %>
+<%@ Import Namespace="Models"%>
 
 
 <script runat="server">

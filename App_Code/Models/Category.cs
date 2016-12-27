@@ -2,7 +2,8 @@
     using System.ComponentModel.DataAnnotations;
 
 
-namespace WebSite1
+
+    namespace Models
 {
 
     public class Category
@@ -18,8 +19,7 @@ namespace WebSite1
 
         public virtual ICollection<Product> Products { get; set; }
 
-       
+
     }
-
-
 }
+

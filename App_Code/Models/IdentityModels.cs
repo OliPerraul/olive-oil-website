@@ -2,8 +2,9 @@
     using System;
     using System.Data.Entity;
     using System.Linq;
-namespace WebSite1
+namespace Models
 {
+
     public class IdentityModels : DbContext
     {
         // Your context has been configured to use a 'Model' connection string from your application's 
@@ -28,4 +29,5 @@ namespace WebSite1
     //    public int Id { get; set; }
     //    public string Name { get; set; }
     //}
+
 }
