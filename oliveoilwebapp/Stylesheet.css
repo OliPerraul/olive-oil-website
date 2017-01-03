@@ -1,0 +1,54 @@
+﻿#section_main {
+
+        background-image: url("assets/Background.jpg"); 
+       
+}
+#section_multiview {
+
+        background-color: #ddc559; 
+
+        
+}
+#title0 
+{
+    font-family:Castellar;
+    align-items:center;
+    font-size:x-large;
+    font-weight:800; 
+    background-color:white;
+
+}
+.menuItems 
+{
+   
+    position:absolute;
+    left: 20px;
+    top: 20px;
+       
+    font-family:Castellar;
+    font-size: medium;
+    font-weight:600; 
+   
+    /*layer*/
+    z-index: 5;
+   
+    color:black;
+
+}
+menuItemSlct
+{
+        position:absolute;
+        left: 20px;
+        top: 25px;
+
+  
+  }
+menuItemUnslct
+{
+        position:absolute;
+        left: -20px;
+        top: -25px;
+
+  
+  }
+

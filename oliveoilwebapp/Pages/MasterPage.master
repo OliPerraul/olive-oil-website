@@ -1,0 +1,77 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="MasterPage" Codebehind="MasterPage.master.cs" %>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+  
+    <link href="../Stylesheet.css" rel="stylesheet" type="text/css" />
+  
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+
+    <div id="section_main">
+        <br />
+        <asp:Label ID="title0" runat="server" Text="Projet Huile d'Olive Portuguaise"></asp:Label>
+        <br />
+        <br />
+        <br />
+        <br />
+        <%--define site map for menu nav--%>
+         <asp:Menu ID="Menu0" runat="server" Orientation="Horizontal" StaticEnableDefaultPopOutImage="False"  OnMenuItemClick="Menu0_MenuItemClick">  <%--For a finer degree of control over the emitted HTML checkout https://msdn.microsoft.com/en-us/library/aa581781.aspx--%>
+         <items>
+        <asp:menuitem NavigateUrl="~/Pages/HomePage.aspx" imageurl="~/assets/tab0_unslct.png" 
+                      text="home" value="0"></asp:menuitem>
+        <asp:menuitem NavigateUrl="~/Pages/SubPages/ShopPage.aspx" imageurl="~/assets/tab1_unslct.png" 
+                      text="shop" value="1"></asp:menuitem>
+        <asp:menuitem NavigateUrl="~/Pages/ContactPage.aspx" imageurl="~/assets/tab2_unslct.png" 
+                      text="contact" value="2" ></asp:menuitem>
+        </items>
+        </asp:Menu>
+        <div runat="server" id="section_multiview">
+        <asp:MultiView ID="MultiView0" runat="server" ActiveViewIndex ="0">  <%--TODO: Get rid of the multiview and generate a list of pages index instead with names--%>
+          <%--View0-----------------------------------------------------HOME-----------------------------------%>
+              <asp:View ID="View0" runat="server">
+                    <div id="home-content"> 
+                    <asp:ContentPlaceHolder ID="content_home" runat ="server">
+
+
+                    </asp:ContentPlaceHolder>
+                  </div>
+            </asp:View>
+          <%--View1------------------------------------------------------SHOP----------------------------------%>
+            <asp:View ID="View1" runat="server">
+           
+                
+                   <div id="shop-content"> 
+                    <asp:ContentPlaceHolder ID="content_shop" runat ="server">
+
+
+                    </asp:ContentPlaceHolder>
+                  </div>
+             
+
+            </asp:View>
+             <%--View2----------------------------------------------------CONTACT------------------------------------%>
+            <asp:View ID="View2" runat="server">
+            <div id="contact-content"> 
+                    <asp:ContentPlaceHolder ID="content_contact" runat ="server">
+
+
+                    </asp:ContentPlaceHolder>
+                </div>
+            </asp:View>
+        </asp:MultiView>
+       </div>
+      </div>
+
+
+  
+    </form>
+</body>
+</html>
+
+
+

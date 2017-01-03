@@ -1,0 +1,13 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" Inherits="ShopMaster" MasterPageFile ="~/Pages/MasterPage.master" Codebehind="ShopMaster.master.cs" %>
+
+
+<asp:Content runat="server" ID="content" ContentPlaceHolderId="content_shop">
+
+   
+            <asp:ContentPlaceHolder runat="server" ID="content_shop">
+
+            </asp:ContentPlaceHolder>
+
+   
+    
+</asp:Content>
